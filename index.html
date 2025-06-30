@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="script.js " />
+    <script src="script.js"></script>
     <link rel="icon" type="./imgs/png" href="imgs/abhi.png" />
   </head>
   <body>
@@ -32,10 +32,10 @@
             <a href="#">Project</a>
           </li>
           <li>
-            <a href="#">Contact Me</a>
+            <a href="#" class="button">Contact Me</a>
           </li>
         </ul>
-        <a href="#" class="mobile-toggle" onclick="toggleMobliMenu()">
+        <a href="#" class="mobile-toggle" onClick="toggleMobliMenu()">
           <svg
             class="w-6 h-6 text-gray-800 dark:text-white"
             aria-hidden="true"
@@ -55,5 +55,84 @@
         </a>
       </nav>
     </header>
+    <main>
+      <section class="hero container">
+        <div class="hero-blue">
+          <div>
+            <h1><small>Hi I'am</small> Abhishek</h1>
+            <p>
+              A Full Stack Developer from India,<br />
+              learning and building real-world projects using the MERN stack,<br />
+              constantly improving my skills to grow in the tech industry.
+              <span>React, NodeJs, MongoDB, ExpressJs.</span>
+            </p>
+            <div class="call-to-action">
+              <a href="#" class="button black">View Resume</a>
+              <a href="#" class="button white">Contact Me</a>
+            </div>
+            <div class="social-links">
+              <a href="#">
+                <img src="./imgs/github.png" alt="GitGub" width="48px" />
+              </a>
+              <a href="#">
+                <img src="./imgs/linkedin.png" alt="linkedin" width="48px" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-yellow">
+          <img src="./imgs/hero-1.png" alt="Abhishek Kumar" width="100%" />
+        </div>
+      </section>
+      <section class="logos container">
+        <div class="marquee">
+          <div class="track">
+            <img src="./imgs/html.png" alt="HTML" width="128" />
+            <img src="./imgs/css.png" alt="CSS" width="128" />
+            <img src="./imgs/javascript.png" alt="Javascript" width="128" />
+            <img src="./imgs/react.png" alt="React" width="128" />
+            <img src="./imgs/vscode.png" alt="VS Code" width="128" />
+            <img src="./imgs/python.png" alt="Python" width="128" />
+            <img src="./imgs/github.png" alt="GitHub" width="128" />
+            <img src="./imgs/Tailwind CSS.png" alt="Tailwind" width="128" />
+            <img src="./imgs/html.png" alt="HTML" width="128" />
+            <img src="./imgs/css.png" alt="CSS" width="128" />
+            <img src="./imgs/javascript.png" alt="Javascript" width="128" />
+            <img src="./imgs/react.png" alt="React" width="128" />
+            <img src="./imgs/vscode.png" alt="VS Code" width="128" />
+            <img src="./imgs/python.png" alt="Python" width="128" />
+            <img src="./imgs/github.png" alt="GitHub" width="128" />
+            <img src="./imgs/Tailwind CSS.png" alt="Tailwind" width="128" />
+          </div>
+        </div>
+      </section>
+      <section class="skills container">
+        <h2>
+          <small> About Me </small>
+          Skills
+        </h2>
+        <div class="holder-blue">
+          <div class="left-column">
+            <div class="left-column">
+              <h3>Fontend</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <ul>
+                <li>NodeJs</li>
+                <li>ExpressJS</li>
+                <li>MongoDB</li>
+              </ul>
+            </div>
+          </div>
+          <div class="right-column">
+            <h3>A bit about me</h3>
+            <p>Hi I'm Abhishek</p>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
