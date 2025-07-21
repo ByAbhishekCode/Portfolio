@@ -1,0 +1,59 @@
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.dynamic-text::after {
+  content: "Web Developer";
+  animation: words 8s infinite steps(1, end);
+  transition: content 0.5s ease-in-out;
+}
+
+.cursor {
+  font-weight: bold;
+  color: #b74b4b;
+  animation: blink 1s infinite;
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Changing Text Animation */
+@keyframes words {
+  0%,
+  25% {
+    content: "Web Developer";
+  }
+  26%,
+  50% {
+    content: "Full Stack Developer";
+  }
+  51%,
+  75% {
+    content: "MERN Stack Developer";
+  }
+  76%,
+  100% {
+    content: "React Developer";
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

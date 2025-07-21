@@ -11,7 +11,6 @@
 
 html {
   font-size: 62.5%;
-
   scroll-behavior: smooth;
 }
 
@@ -104,12 +103,12 @@ nav a.active {
   nav {
     position: absolute;
     display: none;
-    top: 5rem;
-    right: 2rem;
-    width: 40%;
+    /* top: 5rem; */
+    /* right: 2rem; */
+    /* width: 40%; */
     background-color: #161616;
     border: 3px solid #b74b4b;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
     padding: 2rem;
     z-index: 999;
   }
@@ -163,7 +162,7 @@ nav a.active {
 
 .home-img {
   border-radius: 50%;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 .home-img img {
@@ -183,7 +182,7 @@ nav a.active {
   justify-content: center;
   align-items: center;
   width: 4rem;
-  height: 4rem;
+  height: 2rem;
   background-color: transparent;
   border: 0.2rem solid #b74b4b;
   font-size: 2rem;
@@ -222,9 +221,9 @@ nav a.active {
 }
 
 .typing-text {
-  font-size: 34px;
-  font-weight: 600;
-  min-width: 280px;
+  font-size: 30px;
+  font-weight: 500;
+  min-width: 240px;
 }
 
 .typing-text span {
@@ -247,7 +246,11 @@ nav a.active {
   right: -8;
   animation: cursor 0.6s infinite;
 }
-
+@media (max-width: 445px) {
+  .typing-text span{
+    font-size: 20px;
+  }
+}
 @keyframes cursor {
   to {
     border-left: 3px solid #b74b4b;
@@ -277,16 +280,12 @@ nav a.active {
   }
 }
 
-@media (max-width: 1000px) {
-  .home {
-    gap: 4rem;
-  }
-}
-
 @media (max-width: 995px) {
   .home {
+    gap: 4rem;
+    /* background-color: red; */
     flex-direction: column;
-    margin: 5rem 4rem;
+    margin: 2rem 2rem;
   }
 
   .home .home-content h3 {
@@ -298,8 +297,7 @@ nav a.active {
   }
 
   .home-img img {
-    width: 70vw;
-    margin-top: 4rem;
+    width: 30vw;
   }
 }
 
@@ -335,8 +333,7 @@ nav a.active {
   }
 }
 .container {
-  max-width: 1440px;
-  margin: auto;
+  margin: 2rem 3rem;
   gap: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -366,7 +363,7 @@ nav a.active {
     }
     .left-column {
       flex: 1;
-      font-size: 20px;
+      font-size: 1rem;
       ul {
         list-style-type: none;
         gap: 10px;
@@ -377,7 +374,7 @@ nav a.active {
     }
     .right-column {
       flex: 1;
-      font-size: 20px;
+      font-size: 1.7rem;
       p {
         margin-bottom: 20px;
       }
