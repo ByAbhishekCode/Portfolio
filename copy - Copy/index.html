@@ -6,13 +6,20 @@
       name="description"
       content="Portfolio of Abhishek, Full Stack Developer specializing in MERN Stack with real-world projects."
     />
-    <title>Abhishek | Portfolio</title>
+    <title>Portfolio | Abhishek </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
@@ -25,664 +32,717 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body class="bg-black">
-    <nav
-      class="p-5 bg-black text-white shadow md:flex md:items-center md:justify-between sticky top-0 z-50"
-    >
+  <body class="bg-black hidden-scroll">
+    <div>
+      <nav
+        class="p-5 bg-black text-white shadow md:flex md:items-center md:justify-between sticky top-0 z-50"
+      >
       <div class="flex justify-between items-center">
         <span class="text-2xl font-[Poppins] cursor-pointer">
-          <img
-            class="h-15 inline ml-15 transition-transform duration-500 hover:scale-105 hover:brightness-110"
-            src="assests/imeges/name_logo.svg"
-            alt="home"
-          />
+          <a href="/" title="Go to Home">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              class="h-12 w-12 transition-transform duration-500 hover:scale-105 hover:brightness-110"
+            >
+              <path
+                fill="#c95252"
+                d="M549.5 373.2C588.3 333.2 607.6 293.2 608 257.1C608.8 191.6 548.6 138.9 438.6 122.1C309.9 102.4 150.1 137.6 32 204.5C84 178 142.6 156.3 202.7 146.3C277.2 125.8 355.7 120.9 424 131.5C576.5 155.3 620.8 259 522.8 363.2C512.6 374 500.8 384.3 487.8 393.8L336.9 167.4L146.7 452.9C81.1 423.5 70.2 362.7 127.6 301.7C148.4 279.5 175.9 259.8 207.1 243.6C227.1 231.4 246.8 221 269.1 212.9C204 233.2 146.4 265.8 107.5 305.8C79.8 334.4 66.1 362.9 65.8 388.7C65.3 423.8 89.2 453.8 134.2 471.7L99.7 523.4L201.3 523.4L223.3 489C245.5 490 268.6 489 291.9 486.3L269.1 523.4L404.6 523.4L372 470.3C390.6 465 408.9 458.8 426.5 451.6L472.4 523.4L574 523.4L500.6 413C519.1 400.9 535.6 387.5 549.5 373.2zM361.9 453.7L336.9 413.1L304.2 466.4C280.8 469.9 257.5 471.5 235 470.8L336.9 311.5L415.6 434.5C398.4 441.9 380.3 448.4 361.9 453.7z"
+              />
+            </svg>
+          </a>
         </span>
         <span class="text-3xl cursor-pointer mx-2 md:hidden block">
           <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
         </span>
       </div>
-      <ul
-        class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-black w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
-      >
-        <li class="mx-4 my-6 md:my-0">
-          <a href="#home" class="text-xl hover:text-[#b74b4b] duration-500"
-            >Home</a
-          >
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a href="#about_me" class="text-xl hover:text-[#b74b4b] duration-500"
-            >About Me</a
-          >
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a href="#education" class="text-xl hover:text-[#b74b4b] duration-500"
-            >Education</a
-          >
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a href="#projects" class="text-xl hover:text-[#b74b4b] duration-500"
-            >Projects</a
-          >
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-          <a
-            href="#contact_me"
-            class="text-xl hover:text-[#b74b4b] duration-500"
-            >Contact Me</a
-          >
-        </li>
-      </ul>
-    </nav>
-    <main
-      class="bg-black text-white min-h-screen flex items-center justify-center p-5"
-    >
-      <article id="home">
-        <section
-          class="home flex flex-col md:flex-row items-center gap-10 max-w-7xl mx-auto"
+      
+      
+        <ul
+          class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-black w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
         >
-          <!-- Image Section -->
-          <div class="home-img w-full md:w-1/2 flex justify-center">
-            <img
-              src="hero-1.png"
-              alt="Abhishek"
-              class="w-64 md:w-80 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-
-          <!-- Content Section -->
-          <div
-            class="home-content w-full md:w-1/2 text-center md:text-left space-y-5"
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#home" class="text-xl hover:text-[#b74b4b] duration-500"
+              >Home</a
+            >
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a
+              href="#about_me"
+              class="text-xl hover:text-[#b74b4b] duration-500"
+              >About Me</a
+            >
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a
+              href="#education"
+              class="text-xl hover:text-[#b74b4b] duration-500"
+              >Education</a
+            >
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a
+              href="#projects"
+              class="text-xl hover:text-[#b74b4b] duration-500"
+              >Projects</a
+            >
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a
+              href="#contact_me"
+              class="text-xl hover:text-[#b74b4b] duration-500"
+              >Contact Me</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <main
+        class="bg-black text-white min-h-screen flex items-center justify-center p-5"
+      >
+        <article id="home">
+          <section
+            class="home flex flex-col md:flex-row items-center gap-10 max-w-7xl mx-auto"
           >
-            <h1 class="text-4xl md:text-5xl font-bold">
-              Hi, It's <span class="text-[#b74b4b]">Abhishek</span>
-            </h1>
-            <h3
-              class="typing-text text-2xl md:text-3xl font-semibold text-white"
-            >
-              I'm a <span class="dynamic-text text-[#b74b4b]"></span
-              ><span class="cursor">|</span>
-            </h3>
-
-            <p class="text-gray-300 leading-relaxed px-2 md:px-0">
-              Hi! I'm Abhishek, a passionate Web Developer with skills in HTML,
-              CSS, JavaScript, React, Node.js, and MongoDB. I enjoy building
-              modern, responsive, and user-friendly websites. Currently, I'm
-              focusing on Full Stack Development (MERN Stack) and always eager
-              to learn new technologies. I'm seeking opportunities to apply my
-              skills in real-world projects and grow as a professional
-              developer.
-            </p>
-
-            <!-- Social Icons -->
-            <div
-              class="flex justify-center md:justify-start gap-4 text-2xl my-2"
-            >
-              <a
-                href="https://www.linkedin.com/in/abhishek-kumarlink/"
-                class="inline-flex justify-center items-center w-10 h-10 rounded-full border-2 border-[#b74b4b] text-[#b74b4b] hover:text-black hover:bg-[#b74b4b] hover:scale-100 hover:-translate-y-1 transition-all duration-300 ease-in-out shadow-none hover:shadow-[0_0_25px_#b74b4b]"
-              >
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a
-                href="https://github.com/ByAbhishekCode"
-                class="inline-flex justify-center items-center w-10 h-10 rounded-full border-2 border-[#b74b4b] text-[#b74b4b] hover:text-black hover:bg-[#b74b4b] hover:scale-100 hover:-translate-y-1 transition-all duration-300 ease-in-out shadow-none hover:shadow-[0_0_25px_#b74b4b]"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a
-                href="mailto:abhikumar1260@gmail.com?subject=Portfolio Contact&body=Hi Abhishek, I visited your portfolio and..."
-                class="inline-flex justify-center items-center w-10 h-10 rounded-full border-2 border-[#b74b4b] text-[#b74b4b] hover:text-black hover:bg-[#b74b4b] hover:scale-100 hover:-translate-y-1 transition-all duration-300 ease-in-out shadow-none hover:shadow-[0_0_25px_#b74b4b]"
-              >
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-              <a
-                href="tel:+917897126126"
-                class="inline-flex justify-center items-center w-10 h-10 rounded-full border-2 border-[#b74b4b] text-[#b74b4b] hover:text-black hover:bg-[#b74b4b] hover:scale-100 hover:-translate-y-1 transition-all duration-200 ease-in-out shadow-none hover:shadow-[0_0_25px_#b74b4b]"
-              >
-                <i class="fa-solid fa-phone"></i>
-              </a>
+            <!-- Image Section -->
+            <div class="home-img w-full md:w-1/2 flex justify-center">
+              <img
+                src="hero-1.png"
+                alt="Abhishek"
+                class="w-64 md:w-80 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+              />
             </div>
 
-            <!-- Resume Download Button -->
-            <a
-              href="assests/imeges/AbhishekResume_.pdf"
-              download
-              class="inline-block mt-5 bg-[#b74b4b] hover:bg-[#9c3c3c] text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
-              >Download Resume</a
+            <!-- Content Section -->
+            <div
+              class="home-content w-full md:w-1/2 text-center md:text-left space-y-5"
             >
+              <h1 class="text-4xl md:text-5xl font-bold">
+                Hi, It's <span class="text-[#b74b4b]">Abhishek</span>
+              </h1>
+              <h3
+                class="typing-text text-2xl md:text-3xl font-semibold text-white"
+              >
+                I'm a <span class="dynamic-text text-[#b74b4b]"></span
+                ><span class="cursor">|</span>
+              </h3>
+
+              <p class="text-gray-300 leading-relaxed px-2 md:px-0">
+                Hi! I'm Abhishek, a passionate Web Developer with skills in
+                HTML, CSS, JavaScript, React, Node.js, and MongoDB. I enjoy
+                building modern, responsive, and user-friendly websites.
+                Currently, I'm focusing on Full Stack Development (MERN Stack)
+                and always eager to learn new technologies. I'm seeking
+                opportunities to apply my skills in real-world projects and grow
+                as a professional developer.
+              </p>
+
+              <!-- Social Icons -->
+              <div
+                class="flex justify-center md:justify-start gap-4 text-2xl my-2"
+              >
+                <a
+                  href="https://www.linkedin.com/in/abhishek-kumarlink/"
+                  class="inline-flex justify-center items-center w-10 h-10 rounded-full border-2 border-[#b74b4b] text-[#b74b4b] hover:text-black hover:bg-[#b74b4b] hover:scale-100 hover:-translate-y-1 transition-all duration-300 ease-in-out shadow-none hover:shadow-[0_0_25px_#b74b4b]"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://github.com/ByAbhishekCode"
+                  class="inline-flex justify-center items-center w-10 h-10 rounded-full border-2 border-[#b74b4b] text-[#b74b4b] hover:text-black hover:bg-[#b74b4b] hover:scale-100 hover:-translate-y-1 transition-all duration-300 ease-in-out shadow-none hover:shadow-[0_0_25px_#b74b4b]"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a
+                  href="mailto:abhikumar1260@gmail.com?subject=Portfolio Contact&body=Hi Abhishek, I visited your portfolio and..."
+                  class="inline-flex justify-center items-center w-10 h-10 rounded-full border-2 border-[#b74b4b] text-[#b74b4b] hover:text-black hover:bg-[#b74b4b] hover:scale-100 hover:-translate-y-1 transition-all duration-300 ease-in-out shadow-none hover:shadow-[0_0_25px_#b74b4b]"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a
+                  href="tel:+917897126126"
+                  class="inline-flex justify-center items-center w-10 h-10 rounded-full border-2 border-[#b74b4b] text-[#b74b4b] hover:text-black hover:bg-[#b74b4b] hover:scale-100 hover:-translate-y-1 transition-all duration-200 ease-in-out shadow-none hover:shadow-[0_0_25px_#b74b4b]"
+                >
+                  <i class="fa-solid fa-phone"></i>
+                </a>
+              </div>
+
+              <!-- Resume Download Button -->
+              <a
+                href="assests/imeges/AbhishekResume_.pdf"
+                download
+                class="inline-block mt-5 bg-[#b74b4b] hover:bg-[#9c3c3c] text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
+                >Download Resume</a
+              >
+            </div>
+          </section>
+        </article>
+      </main>
+      <section
+        class="logos w-full overflow-hidden bg-[#212121] py-4 px-4 rounded-xs shadow-lg max-w-7xl mx-auto h-24"
+      >
+        <div
+          class="whitespace-nowrap gap-8 flex animate-marquee items-center h-full"
+        >
+          <img src="./assests/marquee/html.png" alt="HTML" class="w-12 mx-4" />
+          <img src="./assests/marquee/css.png" alt="CSS" class="w-12 mx-4" />
+          <img
+            src="./assests/marquee/javascript.png"
+            alt="Javascript"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/react.png"
+            alt="React"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/vscode.png"
+            alt="VS Code"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/python.png"
+            alt="Python"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/github.png"
+            alt="GitHub"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/Tailwind CSS.png"
+            alt="Tailwind"
+            class="w-12 mx-4"
+          />
+          <!-- repeat -->
+          <img src="./assests/marquee/html.png" alt="HTML" class="w-12 mx-4" />
+          <img src="./assests/marquee/css.png" alt="CSS" class="w-12 mx-4" />
+          <img
+            src="./assests/marquee/javascript.png"
+            alt="Javascript"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/react.png"
+            alt="React"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/vscode.png"
+            alt="VS Code"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/python.png"
+            alt="Python"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/github.png"
+            alt="GitHub"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/Tailwind CSS.png"
+            alt="Tailwind"
+            class="w-12 mx-4"
+          />
+          <!-- repeat -->
+          <img src="./assests/marquee/html.png" alt="HTML" class="w-12 mx-4" />
+          <img src="./assests/marquee/css.png" alt="CSS" class="w-12 mx-4" />
+          <img
+            src="./assests/marquee/javascript.png"
+            alt="Javascript"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/react.png"
+            alt="React"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/vscode.png"
+            alt="VS Code"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/python.png"
+            alt="Python"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/github.png"
+            alt="GitHub"
+            class="w-12 mx-4"
+          />
+          <img
+            src="./assests/marquee/Tailwind CSS.png"
+            alt="Tailwind"
+            class="w-12 mx-4"
+          />
+        </div>
+      </section>
+      <section id="about_me" class="max-w-7xl mx-auto px-4 py-10 text-white">
+        <h2
+          class="text-4xl font-bold text-center mb-10 text-white border border-[#212121]"
+        >
+          About Me
+        </h2>
+
+        <div
+          class="flex flex-col md:flex-row gap-8 bg-[#212121] rounded-lg p-8 shadow-lg"
+        >
+          <!-- Left Skills Column -->
+          <div class="md:w-1/2 space-y-10">
+            <!-- Frontend -->
+            <div>
+              <h3 class="text-2xl font-semibold mb-10 text-white">Frontend</h3>
+              <div class="flex flex-wrap gap-12">
+                <!-- HTML -->
+                <div
+                  class="relative flex flex-col items-center group cursor-pointer"
+                >
+                  <img src="./assests/imeges/HTML5.svg" class="w-16" />
+                  <span class="mt-2 text-[#b74b4b] font-semibold">HTML</span>
+                  <div
+                    class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-white shadow-md [background-color:#e44d26]"
+                  >
+                    HTML
+                    <div
+                      class="absolute w-3 h-3 [background-color:#e44d26] rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
+                    ></div>
+                  </div>
+                </div>
+                <!-- CSS -->
+                <div
+                  class="relative flex flex-col items-center group cursor-pointer"
+                >
+                  <img src="./assests/imeges/CSS3.svg" class="w-16" />
+                  <span class="mt-2 text-[#b74b4b] font-semibold">CSS</span>
+                  <div
+                    class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-white shadow-md [background-color:#264de4]"
+                  >
+                    CSS
+                    <div
+                      class="absolute w-3 h-3 [background-color:#264de4] rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
+                    ></div>
+                  </div>
+                </div>
+                <!-- JavaScript -->
+                <div
+                  class="relative flex flex-col items-center group cursor-pointer"
+                >
+                  <img src="./assests/imeges/JavaScript.svg" class="w-16" />
+                  <span class="mt-2 text-[#b74b4b] font-semibold"
+                    >JavaScript</span
+                  >
+                  <div
+                    class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-black shadow-md [background-color:#f7df1e]"
+                  >
+                    JavaScript
+                    <div
+                      class="absolute w-3 h-3 [background-color:#f7df1e] rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
+                    ></div>
+                  </div>
+                </div>
+                <!-- React -->
+                <div
+                  class="relative flex flex-col items-center group cursor-pointer"
+                >
+                  <img src="./assests/imeges/react.svg" class="w-16" />
+                  <span class="mt-2 text-[#b74b4b] font-semibold">React</span>
+                  <div
+                    class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-black shadow-md [background-color:#61dafb]"
+                  >
+                    React
+                    <div
+                      class="absolute w-3 h-3 [background-color:#61dafb] rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div>
+              <h3 class="text-2xl font-semibold mb-10 text-white">Backend</h3>
+              <div class="flex flex-wrap gap-12">
+                <!-- MongoDB -->
+                <div
+                  class="relative flex flex-col items-center group cursor-pointer"
+                >
+                  <img src="./assests/imeges/mongodb.svg" class="w-16" />
+                  <span class="mt-2 text-[#b74b4b] font-semibold">MongoDB</span>
+                  <div
+                    class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-white shadow-md [background-color:#4db33d]"
+                  >
+                    MongoDB
+                    <div
+                      class="absolute w-3 h-3 [background-color:#4db33d] rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
+                    ></div>
+                  </div>
+                </div>
+                <!-- Express -->
+                <div
+                  class="relative flex flex-col items-center group cursor-pointer"
+                >
+                  <img src="./assests/imeges/express.svg" class="w-16" />
+                  <span class="mt-2 text-[#b74b4b] font-semibold">Express</span>
+                  <div
+                    class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-black shadow-md bg-white"
+                  >
+                    Express.js
+                    <div
+                      class="absolute w-3 h-3 bg-white rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
+                    ></div>
+                  </div>
+                </div>
+                <!-- NodeJS -->
+                <div
+                  class="relative flex flex-col items-center group cursor-pointer"
+                >
+                  <img src="./assests/imeges/node.svg" class="w-16" />
+                  <span class="mt-2 text-[#b74b4b] font-semibold">Node.js</span>
+                  <div
+                    class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-white shadow-md [background-color:#8cc84b]"
+                  >
+                    Node.js
+                    <div
+                      class="absolute w-3 h-3 [background-color:#8cc84b] rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Text Column -->
+          <div class="md:w-1/2 text-lg space-y-4 leading-relaxed">
+            <p>
+              Hello! I’m <strong>Abhishek Kumar</strong>, a passionate
+              <strong>Full Stack Web Developer</strong> from
+              <strong>Kanpur, India</strong>. I have completed my
+              <strong>MCA</strong> and developed a solid web technology
+              foundation.
+            </p>
+            <p>
+              I specialize in
+              <strong
+                >MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong
+              >
+              with hands-on skills in
+              <strong>HTML, CSS, JavaScript, TailwindCSS, Bootstrap</strong>.
+            </p>
+            <p>
+              <strong>Currently</strong>, I’m focused on real-world projects,
+              backend API building, and cloud deployment (GitHub, Netlify).
+            </p>
+            <p>
+              <strong>My Goal:</strong> Become a professional Full Stack
+              Developer and build impactful web solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div
+        id="education"
+        class="max-w-7xl mx-auto px-4 py-10 text-white space-y-10"
+      >
+        <h2
+          class="text-4xl font-bold text-center mb-10 text-white border border-[#212121]"
+        >
+          EDUCATION
+        </h2>
+
+        <!-- Education Section -->
+        <section class="bg-[#212121] p-8 rounded-xl shadow-lg">
+          <div class="space-y-8">
+            <!-- MCA -->
+            <div
+              class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
+            >
+              <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2023 - 2025</h4>
+              <h3 class="text-2xl font-semibold mb-1">
+                Master of Computer Applications (MCA)
+              </h3>
+              <h4 class="text-lg font-bold mb-3 text-white">
+                Maharana Pratap Engineering College, Kanpur
+              </h4>
+              <p class="text-gray-300">
+                Pursuing MCA with a specialization in Full Stack Development.
+                The college is affiliated to
+                <strong
+                  >Dr. A.P.J. Abdul Kalam Technical University (AKTU),
+                  Lucknow</strong
+                >.
+              </p>
+            </div>
+
+            <!-- BCA -->
+            <div
+              class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
+            >
+              <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2020 - 2023</h4>
+              <h3 class="text-2xl font-semibold mb-1">
+                Bachelor of Computer Applications (BCA)
+              </h3>
+              <h4 class="text-lg font-bold mb-3 text-white">
+                Dr. Virendra Swarup Institute of Computer Studies, Kanpur
+              </h4>
+              <p class="text-gray-300">
+                Completed BCA with practical project experience. The college is
+                affiliated to
+                <strong
+                  >Chhatrapati Shahu Ji Maharaj University (CSJMU),
+                  Kanpur</strong
+                >.
+              </p>
+            </div>
+
+            <!-- Senior Secondary -->
+            <div
+              class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
+            >
+              <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2019 - 2020</h4>
+              <h3 class="text-2xl font-semibold mb-1">
+                Senior Secondary (10+2, Science Stream)
+              </h3>
+              <h4 class="text-lg font-bold mb-3 text-white">
+                Saraswati Gyan Mandir Inter College, Kanpur
+              </h4>
+              <p class="text-gray-300">
+                Completed Class 12th with Science stream under the
+                <strong
+                  >Uttar Pradesh Board of High School and Intermediate Education
+                  (UP Board)</strong
+                >.
+              </p>
+            </div>
+
+            <!-- High School -->
+            <div
+              class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
+            >
+              <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2017 - 2018</h4>
+              <h3 class="text-2xl font-semibold mb-1">
+                High School (10th, Science Stream)
+              </h3>
+              <h4 class="text-lg font-bold mb-3 text-white">
+                Saraswati Gyan Mandir Inter College, Kanpur
+              </h4>
+              <p class="text-gray-300">
+                Completed Class 10th under the
+                <strong
+                  >Uttar Pradesh Board of High School and Intermediate Education
+                  (UP Board)</strong
+                >.
+              </p>
+            </div>
           </div>
         </section>
-      </article>
-    </main>
-    <section
-      class="logos w-full overflow-hidden bg-[#212121] py-4 px-4 rounded-xs shadow-lg max-w-7xl mx-auto h-24"
-    >
-      <div
-        class="whitespace-nowrap gap-8 flex animate-marquee items-center h-full"
-      >
-        <img src="./assests/marquee/html.png" alt="HTML" class="w-12 mx-4" />
-        <img src="./assests/marquee/css.png" alt="CSS" class="w-12 mx-4" />
-        <img
-          src="./assests/marquee/javascript.png"
-          alt="Javascript"
-          class="w-12 mx-4"
-        />
-        <img src="./assests/marquee/react.png" alt="React" class="w-12 mx-4" />
-        <img
-          src="./assests/marquee/vscode.png"
-          alt="VS Code"
-          class="w-12 mx-4"
-        />
-        <img
-          src="./assests/marquee/python.png"
-          alt="Python"
-          class="w-12 mx-4"
-        />
-        <img
-          src="./assests/marquee/github.png"
-          alt="GitHub"
-          class="w-12 mx-4"
-        />
-        <img
-          src="./assests/marquee/Tailwind CSS.png"
-          alt="Tailwind"
-          class="w-12 mx-4"
-        />
-        <!-- repeat -->
-        <img src="./assests/marquee/html.png" alt="HTML" class="w-12 mx-4" />
-        <img src="./assests/marquee/css.png" alt="CSS" class="w-12 mx-4" />
-        <img
-          src="./assests/marquee/javascript.png"
-          alt="Javascript"
-          class="w-12 mx-4"
-        />
-        <img src="./assests/marquee/react.png" alt="React" class="w-12 mx-4" />
-        <img
-          src="./assests/marquee/vscode.png"
-          alt="VS Code"
-          class="w-12 mx-4"
-        />
-        <img
-          src="./assests/marquee/python.png"
-          alt="Python"
-          class="w-12 mx-4"
-        />
-        <img
-          src="./assests/marquee/github.png"
-          alt="GitHub"
-          class="w-12 mx-4"
-        />
-        <img
-          src="./assests/marquee/Tailwind CSS.png"
-          alt="Tailwind"
-          class="w-12 mx-4"
-        />
-        <!-- repeat -->
-        <img src="./assests/marquee/html.png" alt="HTML" class="w-12 mx-4" />
-        <img src="./assests/marquee/css.png" alt="CSS" class="w-12 mx-4" />
-        <img
-          src="./assests/marquee/javascript.png"
-          alt="Javascript"
-          class="w-12 mx-4"
-        />
-        <img src="./assests/marquee/react.png" alt="React" class="w-12 mx-4" />
-        <img
-          src="./assests/marquee/vscode.png"
-          alt="VS Code"
-          class="w-12 mx-4"
-        />
-        <img
-          src="./assests/marquee/python.png"
-          alt="Python"
-          class="w-12 mx-4"
-        />
-        <img
-          src="./assests/marquee/github.png"
-          alt="GitHub"
-          class="w-12 mx-4"
-        />
-        <img
-          src="./assests/marquee/Tailwind CSS.png"
-          alt="Tailwind"
-          class="w-12 mx-4"
-        />
-      </div>
-    </section>
-    <section id="about_me" class="max-w-7xl mx-auto px-4 py-10 text-white">
-      <h2
-        class="text-4xl font-bold text-center mb-10 text-white border border-[#212121]"
-      >
-        About Me
-      </h2>
 
-      <div
-        class="flex flex-col md:flex-row gap-8 bg-[#212121] rounded-lg p-8 shadow-lg"
-      >
-        <!-- Left Skills Column -->
-        <div class="md:w-1/2 space-y-10">
-          <!-- Frontend -->
-          <div>
-            <h3 class="text-2xl font-semibold mb-10 text-white">Frontend</h3>
-            <div class="flex flex-wrap gap-12">
-              <!-- HTML -->
-              <div
-                class="relative flex flex-col items-center group cursor-pointer"
-              >
-                <img src="./assests/imeges/HTML5.svg" class="w-16" />
-                <span class="mt-2 text-[#b74b4b] font-semibold">HTML</span>
-                <div
-                  class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-white shadow-md [background-color:#e44d26]"
-                >
-                  HTML
-                  <div
-                    class="absolute w-3 h-3 [background-color:#e44d26] rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
-                  ></div>
-                </div>
-              </div>
-              <!-- CSS -->
-              <div
-                class="relative flex flex-col items-center group cursor-pointer"
-              >
-                <img src="./assests/imeges/CSS3.svg" class="w-16" />
-                <span class="mt-2 text-[#b74b4b] font-semibold">CSS</span>
-                <div
-                  class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-white shadow-md [background-color:#264de4]"
-                >
-                  CSS
-                  <div
-                    class="absolute w-3 h-3 [background-color:#264de4] rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
-                  ></div>
-                </div>
-              </div>
-              <!-- JavaScript -->
-              <div
-                class="relative flex flex-col items-center group cursor-pointer"
-              >
-                <img src="./assests/imeges/JavaScript.svg" class="w-16" />
-                <span class="mt-2 text-[#b74b4b] font-semibold"
-                  >JavaScript</span
-                >
-                <div
-                  class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-black shadow-md [background-color:#f7df1e]"
-                >
-                  JavaScript
-                  <div
-                    class="absolute w-3 h-3 [background-color:#f7df1e] rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
-                  ></div>
-                </div>
-              </div>
-              <!-- React -->
-              <div
-                class="relative flex flex-col items-center group cursor-pointer"
-              >
-                <img src="./assests/imeges/react.svg" class="w-16" />
-                <span class="mt-2 text-[#b74b4b] font-semibold">React</span>
-                <div
-                  class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-black shadow-md [background-color:#61dafb]"
-                >
-                  React
-                  <div
-                    class="absolute w-3 h-3 [background-color:#61dafb] rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Backend -->
-          <div>
-            <h3 class="text-2xl font-semibold mb-10 text-white">Backend</h3>
-            <div class="flex flex-wrap gap-12">
-              <!-- MongoDB -->
-              <div
-                class="relative flex flex-col items-center group cursor-pointer"
-              >
-                <img src="./assests/imeges/mongodb.svg" class="w-16" />
-                <span class="mt-2 text-[#b74b4b] font-semibold">MongoDB</span>
-                <div
-                  class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-white shadow-md [background-color:#4db33d]"
-                >
-                  MongoDB
-                  <div
-                    class="absolute w-3 h-3 [background-color:#4db33d] rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
-                  ></div>
-                </div>
-              </div>
-              <!-- Express -->
-              <div
-                class="relative flex flex-col items-center group cursor-pointer"
-              >
-                <img src="./assests/imeges/express.svg" class="w-16" />
-                <span class="mt-2 text-[#b74b4b] font-semibold">Express</span>
-                <div
-                  class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-black shadow-md bg-white"
-                >
-                  Express.js
-                  <div
-                    class="absolute w-3 h-3 bg-white rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
-                  ></div>
-                </div>
-              </div>
-              <!-- NodeJS -->
-              <div
-                class="relative flex flex-col items-center group cursor-pointer"
-              >
-                <img src="./assests/imeges/node.svg" class="w-16" />
-                <span class="mt-2 text-[#b74b4b] font-semibold">Node.js</span>
-                <div
-                  class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 scale-0 group-hover:scale-100 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 px-3 py-1 rounded-xl text-sm font-semibold text-white shadow-md [background-color:#8cc84b]"
-                >
-                  Node.js
-                  <div
-                    class="absolute w-3 h-3 [background-color:#8cc84b] rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Text Column -->
-        <div class="md:w-1/2 text-lg space-y-4 leading-relaxed">
-          <p>
-            Hello! I’m <strong>Abhishek Kumar</strong>, a passionate
-            <strong>Full Stack Web Developer</strong> from
-            <strong>Kanpur, India</strong>. I have completed my
-            <strong>MCA</strong> and developed a solid web technology
-            foundation.
-          </p>
-          <p>
-            I specialize in
-            <strong>MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>
-            with hands-on skills in
-            <strong>HTML, CSS, JavaScript, TailwindCSS, Bootstrap</strong>.
-          </p>
-          <p>
-            <strong>Currently</strong>, I’m focused on real-world projects,
-            backend API building, and cloud deployment (GitHub, Netlify).
-          </p>
-          <p>
-            <strong>My Goal:</strong> Become a professional Full Stack Developer
-            and build impactful web solutions.
-          </p>
-        </div>
-      </div>
-    </section>
-    <div
-      id="education"
-      class="max-w-7xl mx-auto px-4 py-10 text-white space-y-10"
-    >
-      <h2
-        class="text-4xl font-bold text-center mb-10 text-white border border-[#212121]"
-      >
-        EDUCATION
-      </h2>
-
-      <!-- Education Section -->
-      <section class="bg-[#212121] p-8 rounded-xl shadow-lg">
-        <div class="space-y-8">
-          <!-- MCA -->
-          <div
-            class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
-          >
-            <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2023 - 2025</h4>
-            <h3 class="text-2xl font-semibold mb-1">
-              Master of Computer Applications (MCA)
-            </h3>
-            <h4 class="text-lg font-bold mb-3 text-white">
-              Maharana Pratap Engineering College, Kanpur
-            </h4>
-            <p class="text-gray-300">
-              Pursuing MCA with a specialization in Full Stack Development. The
-              college is affiliated to
-              <strong
-                >Dr. A.P.J. Abdul Kalam Technical University (AKTU),
-                Lucknow</strong
-              >.
-            </p>
-          </div>
-
-          <!-- BCA -->
-          <div
-            class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
-          >
-            <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2020 - 2023</h4>
-            <h3 class="text-2xl font-semibold mb-1">
-              Bachelor of Computer Applications (BCA)
-            </h3>
-            <h4 class="text-lg font-bold mb-3 text-white">
-              Dr. Virendra Swarup Institute of Computer Studies, Kanpur
-            </h4>
-            <p class="text-gray-300">
-              Completed BCA with practical project experience. The college is
-              affiliated to
-              <strong
-                >Chhatrapati Shahu Ji Maharaj University (CSJMU), Kanpur</strong
-              >.
-            </p>
-          </div>
-
-          <!-- Senior Secondary -->
-          <div
-            class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
-          >
-            <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2019 - 2020</h4>
-            <h3 class="text-2xl font-semibold mb-1">
-              Senior Secondary (10+2, Science Stream)
-            </h3>
-            <h4 class="text-lg font-bold mb-3 text-white">
-              Saraswati Gyan Mandir Inter College, Kanpur
-            </h4>
-            <p class="text-gray-300">
-              Completed Class 12th with Science stream under the
-              <strong
-                >Uttar Pradesh Board of High School and Intermediate Education
-                (UP Board)</strong
-              >.
-            </p>
-          </div>
-
-          <!-- High School -->
-          <div
-            class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
-          >
-            <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2017 - 2018</h4>
-            <h3 class="text-2xl font-semibold mb-1">
-              High School (10th, Science Stream)
-            </h3>
-            <h4 class="text-lg font-bold mb-3 text-white">
-              Saraswati Gyan Mandir Inter College, Kanpur
-            </h4>
-            <p class="text-gray-300">
-              Completed Class 10th under the
-              <strong
-                >Uttar Pradesh Board of High School and Intermediate Education
-                (UP Board)</strong
-              >.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <h2 id="projects"
-        class="text-4xl font-bold text-center mb-10 text-white border border-[#212121]"
-      >
-        PROJECTS
-      </h2>
-      <section class="bg-[#212121] p-8 rounded-xl shadow-lg">
-        <div class="space-y-8">
-          <!-- 2025 Project -->
-          <div
-            class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
-          >
-            <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2025</h4>
-            <h3 class="text-2xl font-semibold mb-3">
-              To-Do List Web App (MERN Stack)
-            </h3>
-            <p class="text-gray-300">
-              Developed a fully functional To-Do List application using MongoDB,
-              Express.js, React.js, and Node.js (MERN Stack). Includes user
-              authentication, CRUD functionalities, and responsive UI.
-            </p>
-          </div>
-
-          <!-- 2024 Project -->
-          <div
-            class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
-          >
-            <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2024</h4>
-            <h3 class="text-2xl font-semibold mb-3">
-              Amazon Clone (Frontend Only)
-            </h3>
-            <p class="text-gray-300">
-              Built an Amazon-inspired homepage using pure HTML, CSS, and
-              JavaScript, focusing on modern layouts, responsiveness, and clean
-              UI design.
-            </p>
-          </div>
-
-          <!-- 2024 Project -->
-          <div
-            class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
-          >
-            <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2024</h4>
-            <h3 class="text-2xl font-semibold mb-3">
-              Simple Calculator (Frontend)
-            </h3>
-            <p class="text-gray-300">
-              Created a basic calculator web app using HTML, CSS, and JavaScript
-              with responsive design and essential arithmetic operations.
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div id="contact_me" class="max-w-7xl mx-auto p-8 text-white space-y-10">
-      <h2
-        class="text-4xl font-bold text-center mb-10 text-white border border-[#212121]"
-      >
-        CONTACT ME
-      </h2>
-
-      <div
-        class="flex flex-col md:flex-row bg-[#212121] rounded-xl shadow-lg overflow-hidden"
-      >
-        <!-- Left Side -->
-        <div class="flex-1 p-8 space-y-8 bg-[#1a1a1a] text-center">
-          <!-- Address with Map -->
-          <div class="space-y-4">
-            <a
-              href="https://www.google.com/maps/place/Kalyanpur,+Kanpur,+Uttar+Pradesh"
-              target="_blank"
-              class="flex justify-center items-center gap-2 text-gray-300 hover:text-[#b74b4b] text-lg font-semibold"
-            >
-              <i class="fas fa-map-marker-alt text-[#b74b4b] text-2xl"></i>
-              <span>Address : Kanpur, UP, Kalyanpur</span>
-            </a>
-            <!-- Google Map Iframe -->
+        <!-- Projects Section -->
+        <h2
+          id="projects"
+          class="text-4xl font-bold text-center mb-10 text-white border border-[#212121]"
+        >
+          PROJECTS
+        </h2>
+        <section class="bg-[#212121] p-8 rounded-xl shadow-lg">
+          <div class="space-y-8">
+            <!-- 2025 Project -->
             <div
-              class="rounded-lg overflow-hidden border-2 border-[#b74b4b] max-w-md mx-auto"
+              class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
             >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.1115036657465!2d80.22626227500898!3d26.48626147689492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c38685093edcb%3A0xb2bd2014e9e0148f!2sKalyanpur%2C%20Kanpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1692435682555!5m2!1sen!2sin"
-                width="100%"
-                height="250"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+              <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2025</h4>
+              <h3 class="text-2xl font-semibold mb-3">
+                To-Do List Web App (MERN Stack)
+              </h3>
+              <p class="text-gray-300">
+                Developed a fully functional To-Do List application using
+                MongoDB, Express.js, React.js, and Node.js (MERN Stack).
+                Includes user authentication, CRUD functionalities, and
+                responsive UI.
+              </p>
+            </div>
+
+            <!-- 2024 Project -->
+            <div
+              class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
+            >
+              <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2024</h4>
+              <h3 class="text-2xl font-semibold mb-3">
+                Amazon Clone (Frontend Only)
+              </h3>
+              <p class="text-gray-300">
+                Built an Amazon-inspired homepage using pure HTML, CSS, and
+                JavaScript, focusing on modern layouts, responsiveness, and
+                clean UI design.
+              </p>
+            </div>
+
+            <!-- 2024 Project -->
+            <div
+              class="bg-black/80 p-6 rounded-lg shadow-md hover:scale-105 transition-all"
+            >
+              <h4 class="text-[#b74b4b] text-xl font-bold mb-2">2024</h4>
+              <h3 class="text-2xl font-semibold mb-3">
+                Simple Calculator (Frontend)
+              </h3>
+              <p class="text-gray-300">
+                Created a basic calculator web app using HTML, CSS, and
+                JavaScript with responsive design and essential arithmetic
+                operations.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="contact_me" class="max-w-7xl mx-auto p-8 text-white space-y-10">
+        <h2
+          class="text-4xl font-bold text-center mb-10 text-white border border-[#212121]"
+        >
+          CONTACT ME
+        </h2>
+
+        <div
+          class="flex flex-col md:flex-row bg-[#212121] rounded-xl shadow-lg overflow-hidden"
+        >
+          <!-- Left Side -->
+          <div class="flex-1 p-8 space-y-8 bg-[#1a1a1a] text-center">
+            <!-- Address with Map -->
+            <div class="space-y-4">
+              <a
+                href="https://www.google.com/maps/place/Kalyanpur,+Kanpur,+Uttar+Pradesh"
+                target="_blank"
+                class="flex justify-center items-center gap-2 text-gray-300 hover:text-[#b74b4b] text-lg font-semibold"
               >
-              </iframe>
+                <i class="fas fa-map-marker-alt text-[#b74b4b] text-2xl"></i>
+                <span>Address : Kanpur, UP, Kalyanpur</span>
+              </a>
+              <!-- Google Map Iframe -->
+              <div
+                class="rounded-lg overflow-hidden border-2 border-[#b74b4b] max-w-md mx-auto"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.1115036657465!2d80.22626227500898!3d26.48626147689492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c38685093edcb%3A0xb2bd2014e9e0148f!2sKalyanpur%2C%20Kanpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1692435682555!5m2!1sen!2sin"
+                  width="100%"
+                  height="250"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div>
+              <a
+                href="tel:+917897126126"
+                class="flex justify-center items-center gap-2 text-gray-300 hover:text-[#b74b4b] text-lg font-semibold"
+              >
+                <i class="fas fa-phone-alt text-[#b74b4b] text-2xl"></i>
+                <span>Phone : +91 7897 126 126</span>
+              </a>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <a
+                href="mailto:abhikumar1260@gmail.com"
+                class="flex justify-center items-center gap-2 text-gray-300 hover:text-[#b74b4b] text-lg font-semibold"
+              >
+                <i class="fas fa-envelope text-[#b74b4b] text-2xl"></i>
+                <span>Email : abhikumar1260@gmail.com</span>
+              </a>
             </div>
           </div>
 
-          <!-- Phone -->
-          <div>
-            <a
-              href="tel:+917897126126"
-              class="flex justify-center items-center gap-2 text-gray-300 hover:text-[#b74b4b] text-lg font-semibold"
-            >
-              <i class="fas fa-phone-alt text-[#b74b4b] text-2xl"></i>
-              <span>Phone : +91 7897 126 126</span>
-            </a>
-          </div>
+          <!-- Right Side -->
+          <div class="flex-1 p-8 bg-[#1a1a1a] space-y-6">
+            <h3 class="text-2xl font-bold text-[#b74b4b]">Send me a message</h3>
+            <p class="text-gray-400">
+              I’m open to full-time roles, internships, and freelance projects.
+              Drop your message below.
+            </p>
 
-          <!-- Email -->
-          <div>
-            <a
-              href="mailto:abhikumar1260@gmail.com"
-              class="flex justify-center items-center gap-2 text-gray-300 hover:text-[#b74b4b] text-lg font-semibold"
-            >
-              <i class="fas fa-envelope text-[#b74b4b] text-2xl"></i>
-              <span>Email : abhikumar1260@gmail.com</span>
-            </a>
+            <form id="contact-form" class="space-y-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+                class="w-full p-3 rounded-lg bg-[#2d2d2d] text-white outline-none"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+                class="w-full p-3 rounded-lg bg-[#2d2d2d] text-white outline-none"
+              />
+              <textarea
+                name="message"
+                placeholder="Enter your message"
+                required
+                rows="4"
+                class="w-full p-3 rounded-lg bg-[#2d2d2d] text-white outline-none resize-none"
+              ></textarea>
+              <button
+                type="submit"
+                class="w-full bg-[#b74b4b] hover:bg-[#e44d26] text-white font-bold py-3 rounded-lg transition-all"
+              >
+                Send Now
+              </button>
+            </form>
           </div>
         </div>
-
-        <!-- Right Side -->
-        <div class="flex-1 p-8 bg-[#1a1a1a] space-y-6">
-          <h3 class="text-2xl font-bold text-[#b74b4b]">Send me a message</h3>
-          <p class="text-gray-400">
-            I’m open to full-time roles, internships, and freelance projects.
-            Drop your message below.
+      </div>
+      <footer
+        class="bg-[#161616] text-[#b74b4b] py-6 px-4 mt-10 border-t border-[#b74b4b]"
+      >
+        <div
+          class="max-w-7xl mx-auto flex flex-col items-center space-y-3 text-center"
+        >
+          <!-- Main Text -->
+          <p class="text-lg flex items-center gap-2">
+            <span id="year"></span> | Created & Designed by
+            <span
+              class="font-bold text-[#e44d26] hover:underline cursor-pointer"
+              >Abhishek</span
+            >
+            ❤️ |
           </p>
 
-          <form id="contact-form" class="space-y-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              required
-              class="w-full p-3 rounded-lg bg-[#2d2d2d] text-white outline-none"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-              class="w-full p-3 rounded-lg bg-[#2d2d2d] text-white outline-none"
-            />
-            <textarea
-              name="message"
-              placeholder="Enter your message"
-              required
-              rows="4"
-              class="w-full p-3 rounded-lg bg-[#2d2d2d] text-white outline-none resize-none"
-            ></textarea>
-            <button
-              type="submit"
-              class="w-full bg-[#b74b4b] hover:bg-[#e44d26] text-white font-bold py-3 rounded-lg transition-all"
-            >
-              Send Now
-            </button>
-          </form>
+          <!-- Extra Description -->
+          <p class="text-sm text-gray-400 max-w-md">
+            Passionate Full Stack Developer from Kanpur 🚀 | Focused on building
+            modern web solutions using the MERN stack.
+          </p>
         </div>
+      </footer>
+    </div>
+
+    <div
+      class="loading-page flex flex-col items-center justify-center h-screen text-white bg-black px-4 text-center"
+    >
+      <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+        <!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+        <path
+          d="M549.5 373.2C588.3 333.2 607.6 293.2 608 257.1C608.8 191.6 548.6 138.9 438.6 122.1C309.9 102.4 150.1 137.6 32 204.5C84 178 142.6 156.3 202.7 146.3C277.2 125.8 355.7 120.9 424 131.5C576.5 155.3 620.8 259 522.8 363.2C512.6 374 500.8 384.3 487.8 393.8L336.9 167.4L146.7 452.9C81.1 423.5 70.2 362.7 127.6 301.7C148.4 279.5 175.9 259.8 207.1 243.6C227.1 231.4 246.8 221 269.1 212.9C204 233.2 146.4 265.8 107.5 305.8C79.8 334.4 66.1 362.9 65.8 388.7C65.3 423.8 89.2 453.8 134.2 471.7L99.7 523.4L201.3 523.4L223.3 489C245.5 490 268.6 489 291.9 486.3L269.1 523.4L404.6 523.4L372 470.3C390.6 465 408.9 458.8 426.5 451.6L472.4 523.4L574 523.4L500.6 413C519.1 400.9 535.6 387.5 549.5 373.2zM361.9 453.7L336.9 413.1L304.2 466.4C280.8 469.9 257.5 471.5 235 470.8L336.9 311.5L415.6 434.5C398.4 441.9 380.3 448.4 361.9 453.7z"
+        />
+      </svg>
+
+      <div
+        class="logo-name text-white text-xl sm:text-xl md:text-2xl font-semibold text-center leading-snug px-4"
+      >
+        👋Welcome
       </div>
     </div>
-    <footer
-      class="bg-[#161616] text-[#b74b4b] py-6 px-4 mt-10 border-t border-[#b74b4b]"
-    >
-      <div
-        class="max-w-7xl mx-auto flex flex-col items-center space-y-3 text-center"
-      >
-        <!-- Main Text -->
-        <p class="text-lg flex items-center gap-2">
-          <span id="year"></span> | Created & Designed by
-          <span class="font-bold text-[#e44d26] hover:underline cursor-pointer"
-            >Abhishek</span
-          >
-          ❤️ |
-        </p>
-
-        <!-- Extra Description -->
-        <p class="text-sm text-gray-400 max-w-md">
-          Passionate Full Stack Developer from Kanpur 🚀 | Focused on building
-          modern web solutions using the MERN stack.
-        </p>
-      </div>
-    </footer>
-
+    <div id="main-content" class="hidden"></div>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
